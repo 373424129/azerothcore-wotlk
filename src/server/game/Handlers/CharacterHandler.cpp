@@ -912,14 +912,14 @@ void WorldSession::HandlePlayerLoginFromDB(LoginQueryHolder* holder)
 
     // Send MOTD
     {
-        SendPacket(Motd::GetMotdPacket());
+        //SendPacket(Motd::GetMotdPacket());
 
         // send server info
-        if (sWorld->getIntConfig(CONFIG_ENABLE_SINFO_LOGIN) == 1)
-            chH.PSendSysMessage("%s", GitRevision::GetFullVersion());
+        //if (sWorld->getIntConfig(CONFIG_ENABLE_SINFO_LOGIN) == 1)
+            //chH.PSendSysMessage("%s", GitRevision::GetFullVersion());
 
 #if defined(ENABLE_EXTRAS) && defined(ENABLE_EXTRA_LOGS)
-        sLog->outStaticDebug("WORLD: Sent server info");
+        //sLog->outStaticDebug("WORLD: Sent server info");
 #endif
     }
 
